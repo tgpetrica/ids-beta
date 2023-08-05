@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Display System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .selector {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sector-selector {
+            margin-bottom: 20px;
+        }
+
+        .sector-dropdown {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .neighbour-dropdown {
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Info Display System - Local ACC Unit</h1>
+    </header>
+
+    <main>
+        <div class="selector">
+            <div class="sector-selector">
+                <label for="sector">Select Active Sector:</label>
+                <select id="sector" class="sector-dropdown">
+                    <option value="sector1">Sector 1</option>
+                    <option value="sector2">Sector 2</option>
+                    <option value="sector3">Sector 3</option>
+                    <!-- Add more sectors as needed -->
+                </select>
+            </div>
+
+            <div class="neighbour-selector">
+                <label for="neighbours">Neighbouring Sectors:</label>
+                <select id="neighbours" class="neighbour-dropdown">
+                    <!-- Dropdown options will be populated dynamically using JavaScript -->
+                </select>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
